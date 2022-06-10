@@ -13,7 +13,7 @@ const Loader = (Component) => (props) =>
   );
 
 // Dashboards
-const Tasks = Loader(lazy(() => import('src/content/dashboards/Tasks')));
+const Transactions = Loader(lazy(() => import('src/content/applications/Transactions')));
 
 const routes = [
   {
@@ -26,7 +26,7 @@ const routes = [
       },
       {
         path: 'tasks',
-        element: <Tasks />
+        element: <Transactions />
       }
     ]
   }
