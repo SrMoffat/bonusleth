@@ -1,17 +1,49 @@
+import AddIcon from '@mui/icons-material/Add';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import TagIcon from '@mui/icons-material/Tag';
 import { styled } from '@mui/material/styles';
-
 import { Helmet } from 'react-helmet-async';
-import { Container, Grid, Typography, Button } from '@mui/material';
-import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
 
-import PageTitleWrapper from 'src/components/PageTitleWrapper';
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Container,
+  Grid,
+  TextareaAutosize,
+  Typography
+} from '@mui/material';
+
 import Footer from 'src/components/Footer';
+import PageTitleWrapper from 'src/components/PageTitleWrapper';
+
+const Stacos = styled('span')(
+  () => `
+        color: #fff;
+        font-wieght: bolder;
+`
+);
+
+const GiftButton = styled(Button)(
+  ({ theme }) => `
+     &:hover {
+        background: transparent;
+     }
+    `
+);
 
 function Overview() {
   const user = {
-    name: 'Catherine Pike',
+    name: 'Hatch22 KE',
     avatar: '/static/images/avatars/1.jpg'
   };
+
+  const stacos = 30;
+  const placeholderText =
+    '+1 @tessa.pratt for helping me launch a marketing campaign so that we can generate new business #sorted';
+
   return (
     <>
       <Helmet>
@@ -24,30 +56,71 @@ function Overview() {
               Home
             </Typography>
             <Typography variant="subtitle2">
-              {user.name}, your have <span>30 Stacos</span> to give away
+              {user.name}, your have <Stacos>{stacos} Zets</Stacos> to give away
             </Typography>
-          </Grid>
-          <Grid item>
-            <Button
-              sx={{ mt: { xs: 2, md: 0 } }}
-              variant="contained"
-              startIcon={<AddTwoToneIcon fontSize="small" />}
-            >
-              Create transaction
-            </Button>
           </Grid>
         </Grid>
       </PageTitleWrapper>
       <Container maxWidth="lg">
-        <Grid
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="stretch"
-          spacing={3}
-        >
-          <Grid item xs={12}>
-            Here
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <Card>
+              <CardContent>
+                <Box sx={{ mb: 2 }}>
+                  <Button color="primary" variant="outlined" sx={{ mr: 2 }}>
+                    <AddIcon sx={{ mr: 1 }} />
+                    Amount
+                  </Button>
+                  <Button color="primary" variant="outlined" sx={{ mr: 2 }}>
+                    <AlternateEmailIcon sx={{ mr: 1 }} />
+                    Recipient
+                  </Button>
+                  <Button color="primary" variant="outlined" sx={{ mr: 2 }}>
+                    <TagIcon sx={{ mr: 1 }} />
+                    Hashtag
+                  </Button>
+                </Box>
+                <Box width="100%">
+                  <TextareaAutosize
+                    aria-label="empty textarea"
+                    placeholder={placeholderText}
+                    style={{
+                      width: '100%',
+                      backgroundColor: '#111633',
+                      border: '1px solid #9EA4C1',
+                      borderRadius: '4px'
+                    }}
+                    minRows={8}
+                  />
+                </Box>
+              </CardContent>
+              <CardActions>
+                <Button size="small" variant="contained">
+                  Give
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card>
+              <CardContent>
+                <Typography
+                  align="center"
+                  sx={{ fontSize: 18, color: 'gray' }}
+                  gutterBottom
+                >
+                  You have{' '}
+                  <b style={{ fontWeight: 900, color: '#fff' }}>156 Zets</b> to
+                  Redeem
+                </Typography>
+                <Button variant="outlined" fullWidth sx={{ mt: 2 }}>
+                  Pick a Reward
+                </Button>
+              </CardContent>
+              <CardActions>
+                <GiftButton fullWidth>or a give a gift 🎁</GiftButton>
+              </CardActions>
+            </Card>
           </Grid>
         </Grid>
       </Container>
