@@ -1,0 +1,83 @@
+#bonus-give-area {
+  padding: 2rem 1.5rem 4rem;
+  background: linear-gradient(
+    180deg,
+    var(--bg-dark-color) 60%,
+    var(--bg-darker-color) 0
+  );
+
+  .section-wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 3rem;
+  }
+
+  .bonus-balance {
+    grid-column: 1/-1;
+    font-size: 1.1rem;
+    color: var(--white);
+    text-align: left;
+    padding: 1rem 0;
+  }
+
+  .bonus-issue-container {
+    background-color: var(--white);
+    border-radius: 0.2rem;
+  }
+
+  .bonus-issue-actions {
+    display: flex;
+    padding: 1rem 1rem 0;
+    align-items: center;
+    column-gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .issue-button {
+    display: flex;
+    font-weight: 600;
+    color: var(--green);
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border: 2px solid var(--green);
+    background: transparent;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    span {
+      font-size: 0.8rem;
+      margin-left: 0.25rem;
+    }
+    &.dark {
+      color: var(--white);
+      background: var(--green);
+      padding: 0.45rem 1.1rem;
+    }
+    &:hover {
+      color: var(--white);
+      background: var(--dark);
+    }
+  }
+
+  .bonus-issue-description {
+    padding: 0 1rem;
+    textarea {
+      width: 100%;
+      resize: none;
+      background: transparent;
+      border: 0;
+      outline: 0;
+    }
+  }
+
+  .bonus-issue-footer {
+    display: flex;
+    padding: 1rem 1rem;
+    border-top: 1px solid #E8EBED;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}

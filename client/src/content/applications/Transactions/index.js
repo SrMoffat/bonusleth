@@ -10,7 +10,7 @@ function ApplicationsTransactions() {
   return (
     <>
       <Helmet>
-        <title>Transactions - Applications</title>
+        <title>Transactions</title>
       </Helmet>
       <PageTitleWrapper>
         <PageHeader />
