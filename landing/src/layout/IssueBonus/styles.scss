@@ -7,12 +7,7 @@
   );
 
   .section-wrapper {
-    display: grid;
-    align-items: stretch;
-    justify-content: center;
     grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr auto;
-    gap: 0.5rem 3rem;
   }
 
   .bonus-balance {
@@ -65,6 +60,7 @@
 
   .bonus-issue-description {
     padding: 0 1rem;
+    margin-top: 1.5rem;
     textarea {
       width: 100%;
       resize: none;
