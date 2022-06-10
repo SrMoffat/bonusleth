@@ -124,7 +124,7 @@ function Hero() {
                 <Typography component="span" variant="subtitle2">
                   {' '}
                   - A simple and customizable component library to build faster,
-                  beautiful, andaccessible React apps.
+                  beautiful, and accessible React apps.
                 </Typography>
               </Typography>
             </Grid>
@@ -141,8 +141,7 @@ function Hero() {
                 </Box>
                 <Typography component="span" variant="subtitle2">
                   {' '}
-                  - Tokyo Free React Admin Dashboard features a modern
-                  technology stack and is built with React + Javascript.
+                  Code-Blooded Ninjas
                 </Typography>
               </Typography>
             </Grid>

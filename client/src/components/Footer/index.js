@@ -21,11 +21,14 @@ function Footer() {
         >
           <Box>
             <Typography variant="subtitle1">
-              &copy; 2021 - Tokyo Free Black React Admin Dashboard
+              &copy; 2022 - Zawady Inc.
             </Typography>
           </Box>
           <Typography sx={{ pt: { xs: 2, md: 0 } }} variant="subtitle1">
-            Crafted by <Link href="https://bloomui.com" target="_blank" rel="noopener noreferrer">BloomUI.com</Link>
+            Crafted by{' '}
+            <Link href="#" target="_blank" rel="noopener noreferrer">
+              Code-Blooded Ninjas
+            </Link>
           </Typography>
         </Box>
       </Container>
