@@ -1,3 +1,4 @@
+import { VisibilityRounded } from '@mui/icons-material';
 import HomeIcon from '@mui/icons-material/Home';
 import PaidIcon from '@mui/icons-material/Paid';
 
@@ -14,6 +15,11 @@ const menuItems = [
         name: 'Transactions',
         link: '/dashboards/tasks',
         icon: PaidIcon
+      },
+      {
+        name: 'Recognition',
+        link: '/dashboards/recognition',
+        icon: VisibilityRounded
       }
       // {
       //   name: 'ETH Management',
