@@ -18,6 +18,8 @@ const Transactions = Loader(
 );
 const Overview = Loader(lazy(() => import('src/content/overview')));
 
+const Recognition = Loader(lazy(() => import('src/content/recognition')));
+
 const routes = [
   {
     path: 'dashboards',
@@ -26,7 +28,7 @@ const routes = [
       {
         path: '/',
         element: <Navigate to="/dashboards/tasks" replace />
-      },
+      },  
       {
         path: 'tasks',
         element: <Transactions />
@@ -34,7 +36,12 @@ const routes = [
       {
         path: '/home',
         element: <Overview />
+      },
+      {
+        path: '/recognition',
+        element: <Recognition/>
       }
+
     ]
   }
 ];
