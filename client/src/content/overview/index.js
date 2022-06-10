@@ -15,7 +15,7 @@ const GalaxyPaper = styled('div')(
 
 function Overview() {
   return (
-    <Box>Home page</Box>
+    <Box>Home page </Box>
     // <GalaxyPaper>
     //   <div style={{ border: '1px solid red' }}>NNavBard</div>
     //   <div style={{ border: '1px solid red' }}>World Map</div>

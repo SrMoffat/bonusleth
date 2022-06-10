@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom';
 import SidebarLayout from 'src/layouts/SidebarLayout';
 
 import SuspenseLoader from 'src/components/SuspenseLoader';
+import { element } from 'prop-types';
 
 const Loader = (Component) => (props) =>
   (
@@ -17,8 +18,13 @@ const Transactions = Loader(
   lazy(() => import('src/content/applications/Transactions'))
 );
 const Overview = Loader(lazy(() => import('src/content/overview')));
+const Home = Loader(lazy(() => import('src/content/Home')));
 
 const routes = [
+  {
+    path: '/',
+    element: <Home />
+  },
   {
     path: 'dashboards',
     element: <SidebarLayout />,
