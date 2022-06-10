@@ -26,6 +26,14 @@ const Stacos = styled('span')(
 `
 );
 
+const GiftButton = styled(Button)(
+  ({ theme }) => `
+     &:hover {
+        background: transparent;
+     }
+    `
+);
+
 function Overview() {
   const user = {
     name: 'Hatch22 KE',
@@ -48,7 +56,7 @@ function Overview() {
               Home
             </Typography>
             <Typography variant="subtitle2">
-              {user.name}, your have <Stacos>{stacos} Stacos</Stacos> to redeem
+              {user.name}, your have <Stacos>{stacos} Zets</Stacos> to give away
             </Typography>
           </Grid>
         </Grid>
@@ -56,7 +64,7 @@ function Overview() {
       <Container maxWidth="lg">
         <Grid container spacing={2}>
           <Grid item xs={8}>
-            <Card sx={{ minWidth: 275 }}>
+            <Card>
               <CardContent>
                 <Box sx={{ mb: 2 }}>
                   <Button color="primary" variant="outlined" sx={{ mr: 2 }}>
@@ -87,32 +95,30 @@ function Overview() {
                 </Box>
               </CardContent>
               <CardActions>
-                <Button
-                  size="small"
-                  variant="contained"
-                >
+                <Button size="small" variant="contained">
                   Give
                 </Button>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={4}>
-            <Card sx={{ minWidth: 275 }}>
+            <Card>
               <CardContent>
-                <Typography variant="h5" component="div">
-                  Bull
+                <Typography
+                  align="center"
+                  sx={{ fontSize: 18, color: 'gray' }}
+                  gutterBottom
+                >
+                  You have{' '}
+                  <b style={{ fontWeight: 900, color: '#fff' }}>156 Zets</b> to
+                  Redeem
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                  adjective
-                </Typography>
-                <Typography variant="body2">
-                  well meaning and kindly.
-                  <br />
-                  {'"a benevolent smile"'}
-                </Typography>
+                <Button variant="outlined" fullWidth sx={{ mt: 2 }}>
+                  Pick a Reward
+                </Button>
               </CardContent>
               <CardActions>
-                <Button size="small">Learn More</Button>
+                <GiftButton fullWidth>or a give a gift 🎁</GiftButton>
               </CardActions>
             </Card>
           </Grid>
