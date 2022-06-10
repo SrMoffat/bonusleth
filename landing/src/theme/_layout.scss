@@ -1,0 +1,12 @@
+#app {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: var(--bg-darker-color);
+  font-size: 0.8rem;
+}
+
+.section-wrapper {
+  width: 100%;
+  margin: auto;
+  max-width: 55rem;
+}
