@@ -40,6 +40,30 @@ function Overview() {
     avatar: '/static/images/avatars/1.jpg'
   };
 
+  const rewards = [
+    {
+      amount: 20,
+      rewarder: 'TM',
+      category: 'Welcome Gift',
+      recipient: 'Yes',
+      specs: '#tech'
+    },
+    {
+      amount: 20,
+      rewarder: 'TM',
+      category: 'Welcome Gift',
+      recipient: 'Yes',
+      specs: '#tech'
+    },
+    {
+      amount: 20,
+      rewarder: 'TM',
+      category: 'Welcome Gift',
+      recipient: 'Yes',
+      specs: '#tech'
+    }
+  ];
+
   const stacos = 30;
   const placeholderText =
     '+1 @tessa.pratt for helping me launch a marketing campaign so that we can generate new business #sorted';
@@ -100,6 +124,84 @@ function Overview() {
                 </Button>
               </CardActions>
             </Card>
+            <Box sx={{ marginTop: 3 }}>
+              <Button
+                sx={{ borderTopRightRadius: 0, borderBottomRightRadius: 0 }}
+                variant="contained"
+              >
+                Relevant
+              </Button>
+              <Button
+                sx={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
+                variant="outlined"
+              >
+                Everything
+              </Button>
+            </Box>
+            <Box>
+              {rewards?.map((entry) => (
+                <Card sx={{ marginTop: 2 }}>
+                  <CardContent>
+                    <Box
+                      sx={{
+                        border: '1px solid red',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        my: '10px'
+                      }}
+                    >
+                      <Box>
+                        <Box>O</Box>
+                        <Box>generate</Box>
+                      </Box>
+                      <Box>One</Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        border: '1px solid red',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        my: '10px',
+                        flexDirection: 'row'
+                      }}
+                    >
+                      Two
+                    </Box>
+                    <Box
+                      sx={{
+                        border: '1px solid red',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        my: '10px'
+                      }}
+                    >
+                      Three
+                    </Box>
+                    <Box
+                      sx={{
+                        border: '1px solid red',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        my: '10px'
+                      }}
+                    >
+                      Four
+                    </Box>
+                    <Box
+                      sx={{
+                        border: '1px solid red',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        my: '10px'
+                      }}
+                    >
+                      Five
+                    </Box>
+                  </CardContent>
+                  {/* <CardActions>Transactions</CardActions> */}
+                </Card>
+              ))}
+            </Box>
           </Grid>
           <Grid item xs={4}>
             <Card>
@@ -124,6 +226,69 @@ function Overview() {
           </Grid>
         </Grid>
       </Container>
+      {/* <Container maxWidth="lg">
+        <Grid container spacing={2} style={{ marginTp: 10 }}>
+          <Grid item xs={8}>
+            <Card>
+              <CardContent>
+                <Box sx={{ mb: 2 }}>
+                  <Button color="primary" variant="outlined" sx={{ mr: 2 }}>
+                    <AddIcon sx={{ mr: 1 }} />
+                    Amount
+                  </Button>
+                  <Button color="primary" variant="outlined" sx={{ mr: 2 }}>
+                    <AlternateEmailIcon sx={{ mr: 1 }} />
+                    Recipient
+                  </Button>
+                  <Button color="primary" variant="outlined" sx={{ mr: 2 }}>
+                    <TagIcon sx={{ mr: 1 }} />
+                    Hashtag
+                  </Button>
+                </Box>
+                <Box width="100%">
+                  <TextareaAutosize
+                    aria-label="empty textarea"
+                    placeholder={placeholderText}
+                    style={{
+                      width: '100%',
+                      backgroundColor: '#111633',
+                      border: '1px solid #9EA4C1',
+                      borderRadius: '4px'
+                    }}
+                    minRows={8}
+                  />
+                </Box>
+              </CardContent>
+              <CardActions>
+                <Button size="small" variant="contained">
+                  Give
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card>
+              <CardContent>
+                <Typography
+                  align="center"
+                  sx={{ fontSize: 18, color: 'gray' }}
+                  gutterBottom
+                >
+                  You have{' '}
+                  <b style={{ fontWeight: 900, color: '#fff' }}>156 Zets</b> to
+                  Redeem
+                </Typography>
+                <Button variant="outlined" fullWidth sx={{ mt: 2 }}>
+                  Pick a Reward
+                </Button>
+              </CardContent>
+              <CardActions>
+                <GiftButton fullWidth>or a give a gift 🎁</GiftButton>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container> */}
       <Footer />
     </>
   );
