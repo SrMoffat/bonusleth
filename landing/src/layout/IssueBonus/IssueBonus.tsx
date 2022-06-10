@@ -23,7 +23,7 @@ const IssueBonus = () => {
   return (
     <section id="bonus-give-area">
       <div className="section-wrapper">
-        <div className="bonus-balance">You have <b>{balance} ZAWADIs</b> to give away</div>
+        <div className="bonus-balance">You have <b>{balance} Zawadis</b> to give away</div>
         <div className="bonus-issue-container">
           <div className="bonus-issue-actions">
             <IssueButton label="Amount" icon={<FiPlus />} onClick={handleAddAmount} />
