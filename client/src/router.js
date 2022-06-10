@@ -32,11 +32,29 @@ const routes = [
         element: <Transactions />
       },
       {
-        path: 'home',
+        path: 'messenger',
         element: <Overview />
       }
     ]
   }
+  // {
+  //   path: 'dashboards',
+  //   element: <SidebarLayout />,
+  //   children: [
+  //     {
+  //       path: '/',
+  //       element: <Navigate to="/dashboards/tasks" replace />
+  //     },
+  //     {
+  //       path: 'tasks',
+  //       element: <Transactions />
+  //     },
+  //     {
+  //       path: 'home',
+  //       element: <Overview />
+  //     }
+  //   ]
+  // }
 ];
 
 export default routes;
