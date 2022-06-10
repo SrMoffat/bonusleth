@@ -1,5 +1,7 @@
 import { styled } from '@mui/material/styles';
 
+import { Box } from '@mui/material';
+
 const GalaxyPaper = styled('div')(
   () => `
       position: absolute;
@@ -13,10 +15,11 @@ const GalaxyPaper = styled('div')(
 
 function Overview() {
   return (
-    <GalaxyPaper>
-      <div style={{ border: '1px solid red' }}>NNavBard</div>
-      <div style={{ border: '1px solid red' }}>World Map</div>
-    </GalaxyPaper>
+    <Box>Home page</Box>
+    // <GalaxyPaper>
+    //   <div style={{ border: '1px solid red' }}>NNavBard</div>
+    //   <div style={{ border: '1px solid red' }}>World Map</div>
+    // </GalaxyPaper>
   );
 }
 

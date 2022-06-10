@@ -72,7 +72,7 @@ function HeaderMenu() {
           >
             <ListItemText
               primaryTypographyProps={{ noWrap: true }}
-              primary="Buttons"
+              primary="Transactions"
             />
           </ListItem>
         </List>
